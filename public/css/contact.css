@@ -1,0 +1,137 @@
+.image-contact {
+    width: 100%;
+    height: 250px; /* Set a fixed height or adjust as needed */
+    background-image: url("/images/chicago.jpg"), linear-gradient(white, rgba(255, 255, 255, 0.5)); /* Add a linear gradient with white color and 0.5 opacity */
+    background-blend-mode: overlay; /* Blend the gradient with the background image */
+    background-size: cover;
+    background-position: center;
+  }
+.image-text{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}  
+
+.info {
+    margin-top: 4%;
+    display: flex;
+    justify-content: space-around; /* Distribute items evenly */
+}
+
+.contact-item {
+      flex-direction: column;
+    display: flex;
+    /* align-items: center; Align items vertically */
+  }
+  
+  .detail {
+    margin-left: 10px; /* Add spacing between icon and details */
+    
+    text-align: center;
+  }
+  
+  .detail-head {
+    font-weight: bold;
+  }
+  
+  .detail-content {
+    color: #333; /* Adjust text color */
+  }
+  @media screen and (max-width:600px) {
+    
+.info {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+     justify-content: space-around;
+}
+.detail{
+    margin: 20px;
+}
+.container{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+}
+  }
+.container {
+display: flex;
+justify-content: space-around;
+margin-top: 4%;
+align-items: center; 
+}
+
+.left-section {
+flex: 1; /* Left section takes up remaining space */
+padding: 20px;
+}
+
+.left-section input,
+.left-section textarea,
+.left-section button {
+width: 100%;
+padding: 10px;
+margin-bottom: 10px;
+border: 1px solid #ccc;
+border-radius: 5px;
+}
+
+.left-section .row {
+display: flex;
+justify-content: space-between;
+}
+
+.left-section .row input {
+flex: 1;
+margin-right: 10px;
+}
+
+.right-section {
+flex: 1; /* Right section takes up remaining space */
+padding: 20px;
+}
+
+.right-section img {
+max-width: 100%; /* Ensure image fits within its container */
+height: auto; /* Maintain aspect ratio */
+}
+.send-button{
+background-color:  #f52d7b;;
+}
+@media screen and (max-width:600px) {
+
+  /* CSS for mobile devices */
+  .right-section {
+    text-align: center; /* Center the image */
+  }
+  
+  .right-section img {
+    max-width: 100%; /* Make the image responsive */
+    height: auto;
+    display: block; /* Ensure image is treated as a block element */
+    margin: 0 auto; /* Center the image horizontally */
+  }
+  
+}
+
+  
+
+.image-contact{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.detail-head{
+  margin-top: 5px;
+}
+.detail-content{
+  margin-top: 3px;
+}
+.row{
+  padding-left: 2%;
+}
+

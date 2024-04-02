@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/recipe.css">
+    <title>Document</title>
+</head>
+<body>
+  {{>nav}}
+
+
+<div class="total-container">    
+<div class="container animated">
+  <h2 class="uploadheading">Upload Your Recipe</h2>
+  <form action="/recipe" method="post" enctype="multipart/form-data">
+    <div class="input-field">
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required>
+    </div>
+    <div class="input-field">
+      <label for="recipe-name">Recipe Name</label>
+      <input type="text" id="recipe-name" name="recipename" required>
+    </div>
+    <div class="input-field">
+      <label for="description">Description</label>
+      <textarea id="description" name="description" rows="4" required></textarea>
+    </div>
+    <div class="input-field">
+      <div class="all-ingidient">
+      <label for="ingredients">Ingredients</label>
+      <input class="ingredients" name="ingredientsone" >
+      <input class="ingredients" name="ingredientstwo" >
+      <input class="ingredients" name="ingredientsthree" >
+      <input class="ingredients" name="ingredientsfour">
+      <input class="ingredients" name="ingredientsfive" >
+      <input class="ingredients" name="ingredientssix" >
+      <input class="ingredients" name="ingredientsseven">
+      <input class="ingredients" name="ingredientseight">
+     
+      </div>
+    </div>
+    <div class="input-field">
+      <label for="category">Select Category</label>
+      <select id="category" name="category" required>
+        <option value="">Select...</option>
+        <option value="breakfast">Breakfast</option>
+        <option value="lunch">Lunch</option>
+        <option value="dinner">Dinner</option>
+        <option value="dessert">Dessert</option>
+      </select>
+    </div>
+    <div class="input-field">
+      <label for="image">Upload Product Image</label>
+      <input type="file" id="image" name="image" accept="image/*">
+      <label class="file-upload" for="image">Choose File</label>
+    </div>
+    <input type="submit" value="Upload">
+  </form>
+</div>
+</div>
+</body>
+</html>

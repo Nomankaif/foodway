@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap demo</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+   
+
+  </head>
+  <body>
+    <div class="container-of-nav">
+      <div class="logo-of-nav"> 𝓕𝓸𝓸𝓭𝓲𝓮𝔀𝓪𝔂</div>
+      <div class="nav-list-items">
+        <nav>
+          <ul class="nav-items">
+            <a href="/"><li class="listof-items">Home</li></a>
+           <a href="/recipe"> <li class="listof-items">Upload Recipe</li></a>
+           <a href="/yourrecipe" ><li class="listof-items">Recipe</li></a>
+           <a href="/contact"><li class="listof-items">Contact us</li></a>
+          </ul>
+        </nav>
+      </div>
+      <div class="social-media-logo">
+  <a href="https://www.instagram.com/nomankaif03?utm_source=qr&igsh=YmlmMWhmMnM2ZDZi">
+    <i class="fa-brands fa-instagram fa-xl icons insta" style="color: #000000"></i>
+  </a>
+  
+  <a href="https://www.instagram.com/nomankaif03?utm_source=qr&igsh=YmlmMWhmMnM2ZDZi">
+    <i class="fa-brands fa-facebook fa-xl icons facebook" style="color: #000000"></i>
+  </a>
+
+  <a href="https://www.instagram.com/nomankaif03?utm_source=qr&igsh=YmlmMWhmMnM2ZDZi">
+    <i class="fa-brands fa-twitter fa-xl icons twitter" style="color: #030303"></i>
+  </a>
+</div>
+
+      <div class="my-humbar">
+
+       <li class="mybar">
+         
+       <i class="fa-solid fa-bars fa-lg "></i>
+       </li>
+      </div>
+    </div>
+    <div class="check-nav-responsive responsive-bar">
+      <li><a href="/" class="no-underline">Home</a></li> 
+      <hr />
+      <li><a href="/recipe" class="no-underline">Upload Recipe</a></li> 
+      <hr />
+      <li><a href="/yourrecipe" class="no-underline">Recipe</a></li> 
+      <hr />
+      <li><a href="/contact" class="no-underline">Contact Us</a> </li>
+      <hr />
+    </div>
+
+
+
+    <script>
+      let humbar=document.querySelector(".mybar");      
+let checkNav=document.querySelector(".check-nav-responsive")
+
+humbar.addEventListener("click",()=>{
+    checkNav.classList.toggle("check-nav-responsive")
+})
+    </script>
+</body>
+</html>

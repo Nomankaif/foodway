@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/yourecipe.css">
+</head>
+<body>
+    {{>nav}}
+    
+    <hr>
+
+    <div class="total-header">
+      <div class="food-categories">
+           <h2>Food Categories</h2>
+         <ul class="food-types">
+            <li class="red" >Meat</li>
+            <li class="green" >Vegan</li>
+            <li class="brown" >Breakfast</li>
+            <li class="pink" >Dessert</li>
+             <li class="red">Meals</li>
+          </ul>
+     </div>
+
+     <div class="search-container">
+          <input type="text" placeholder="Search recipe" class="text-search" >
+           <button class="search" type="submit" onclick="searching()" ><i class="fa fa-search"></i></button>
+     </div>
+
+
+    </div>
+
+
+
+
+ 
+    
+  {{#each posts}}
+</br>
+ <div class="container-of-recipes">
+
+
+  <div class="image-of-recipe-dynamic">
+    <img src="{{image}}" alt="dish-image" class="imageoftherecipe">
+        </div>
+
+
+  <div class="total-ttext-dunamic">
+        <div class="content-of-recipe">
+
+              <h1 class="heading">{{recipename}}/{{category}}</h1>
+
+                <div class="cooking-instruction">
+                    <h2 class="heading">Cooking Description</h2>
+
+                     <p>{{ description}}</p>
+                </div>
+
+                 <div class="ingredient">
+                     <h2 class="heading">Ingredient</h2>
+
+                    <ul>
+                     <li>{{ingredientsone}}</li>
+                     <hr>
+                     <li>{{ingredientstwo}}</li>
+                     <hr>
+                     <li>{{ingredientsthree}}</li>
+                     <hr>
+                     <li>{{ingredientsfour}}</li>
+                     <hr>
+                     <li>{{ingredientsfive}}</li>
+                     <hr>
+                     <li>{{ingredientssix}}</li>
+                     <hr>
+                     <li>{{ingredientsseven}}</li>
+                     <hr>
+                     <li>{{ingredientseight}}</li>
+                      
+                      </ul>
+                 </div>
+
+          </div>
+
+    </div>
+
+
+
+ </div>
+
+
+
+
+
+  {{/each}}
+    
+
+
+
+
+
+
+
+
+
+
+<script>
+
+
+ 
+const searching = () => {
+  let text = document.querySelector(".text-search").value.toUpperCase();
+  let container = document.querySelectorAll(".container-of-recipes");
+
+  container.forEach((recipe) => {
+    let head = recipe.querySelector(".heading");
+    if (head) {
+      let headValue = head.textContent || head.innerText;
+      if (headValue.toUpperCase().indexOf(text) > -1) {
+        recipe.style.display = "";
+      } else {
+        recipe.style.display = "none";
+      }
+    }
+  });
+};
+
+
+
+const recipeCards = document.querySelectorAll('.container-of-recipes');
+
+function checkVisibility() {
+  recipeCards.forEach(card => {
+    const cardTop = card.getBoundingClientRect().top;
+    const windowHeight = window.innerHeight;
+
+    if (cardTop < windowHeight * 0.8) {
+      card.classList.add('container-visible');
+    }
+  });
+}
+
+window.addEventListener('scroll', checkVisibility);
+
+
+
+
+
+ 
+
+
+
+
+
+    
+  
+</script>
+</body>
+</html>

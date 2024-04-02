@@ -1,0 +1,232 @@
+/* CSS for Food Categories */
+
+.food-categories {
+    margin-top: 20px; /* Adjust as needed */
+    text-align: center;
+  }
+  
+  .food-categories h2 {
+    color: #333;
+  }
+  
+  .food-categories ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .food-categories li {
+    display: inline-block;
+    margin: 0 10px;
+    padding: 8px 16px;
+    background-color: #f1f1f1;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .food-categories li:hover {
+    background-color: #ddd;
+  }
+  
+  /* Animation for the food categories */
+  @keyframes slideInFromBottom {
+    0% {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  .food-categories {
+    animation: slideInFromBottom 1s ease-out;
+  }
+  .container-of-recipes{
+    display: flex;
+    width: 95%;
+    background-color: #F8F8F8;
+    margin-left: 2%;
+    justify-content: center;
+    align-items: center;
+}
+.image-of-recipe{
+    width: 100%;
+}
+
+.imageoftherecipe{
+    width: 90%;
+    border: 2px solid white;
+    border-radius: 50px;
+}
+@media screen and (max-width:600px) {
+    .container-of-recipes{
+        display: flex;
+        flex-direction: column;
+    }
+    .content-of-recipe{
+        padding: 6px;
+    }
+}
+.content-of-recipe{
+    padding: 2%;
+}
+
+.container-of-recipes {
+    transform: translateY(50px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.container-of-recipes.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+.red{
+  background-image: linear-gradient(to bottom, rgb(219, 156, 156), white)
+}
+.green{
+  background-image: linear-gradient(to bottom, rgb(128, 215, 96), white);
+
+}
+.brown{
+  background-image: linear-gradient(to bottom, rgb(226, 77, 77), white);
+
+}
+.pink{
+  background-image: linear-gradient(to bottom, rgb(250, 129, 194), white);
+
+}
+
+.container-of-recipes {
+  display: flex;
+  width: 95%;
+  background-color: #F8F8F8;
+  margin: 10px auto; /* Center the container and add some spacing */
+  border-radius: 50px; /* Rounded corners for a softer look */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for depth */
+}
+
+.image-of-recipe-dynamic {
+  width: 30%; /* Adjust width for image */
+}
+
+.imageoftherecipedynamic {
+  width: 400px;
+  border-radius: 50px; /* Rounded corners for the image */
+  border: 2px solid white;
+}
+
+.total-ttext-dunamic {
+  width: 70%; /* Adjust width for text content */
+  padding: 20px; /* Add padding for spacing */
+}
+
+/* Styling for headings */
+.heading {
+  color: #333; /* Darker text color for headings */
+}
+
+/* Styling for cooking instructions */
+.cooking-instruction {
+  margin-top: 20px; /* Add some spacing between sections */
+}
+
+/* Styling for ingredients */
+.ingredient {
+  margin-top: 20px
+}
+
+.ingredient ul {
+  list-style-type: none; /* Remove bullet points */
+  padding: 0;
+}
+
+.ingredient ul li {
+  margin-bottom: 10px; /* Add spacing between ingredients */
+}
+
+@media screen and (max-width: 600px) {
+  .container-of-recipes {
+      flex-direction: column; /* Stack elements vertically on smaller screens */
+  }
+
+  .image-of-recipe-dynamic,
+  .total-ttext-dunamic {
+      width: 100%; /* Full width on smaller screens */
+  }
+}
+.food-types{
+  margin-top: 14px;
+}
+.search-container {
+  position: relative;
+  width: 300px;
+  /* margin: 0 auto; */
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 10px 20px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  outline: none;
+  font-size: 16px;
+  transition: width 0.4s ease-in-out;
+}
+
+input[type="text"]:focus {
+  width: 80%;
+}
+
+button[type="submit"] {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  outline: none;
+  transition: background-color 0.4s ease-in-out;
+}
+
+button[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+.fa-search {
+  font-size: 20px;
+}
+
+.total-header{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+@media screen and (max-width:600px) {
+  .total-header{
+    display: flex;
+    flex-direction: column;
+  }
+  
+}
+
+.container-of-recipes {
+  animation: slideInUp 0.5s ease forwards;
+  opacity: 0;
+  background-color: #F0FFF4;
+}
+
+.container-of-recipes {
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: opacity 0.5s, transform 0.5s;
+}
+
+.container-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
