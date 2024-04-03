@@ -38,6 +38,9 @@ app.use(express.static(staticpath));
 app.set("view engine", "hbs");
 app.set("views", templatepath);
 hbs.registerPartials(partial);
+console.log(staticpath);
+console.log(templatepath);
+console.log(partial)
 
 // Routes
 app.get("/", (req, res) => {
