@@ -58,8 +58,11 @@ app.post("/recipe", upload.single('image'), async (req, res) => {
       return res.status(400).send('No files were uploaded.');
     }
 
+   
+  
     // Get the image path with filename
-    const imagePath = '/images/' + req.file.filename;
+     const imagePath = '/uploads/' + req.file.filename;
+
 
     // Create new Recipe document
     const registerRecipe = new Recipe({
