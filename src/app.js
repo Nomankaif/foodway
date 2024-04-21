@@ -60,7 +60,7 @@ app.post("/recipe", upload.single('image'), async (req, res) => {
 
    
   
-    // Get the image path with filename
+    // Get the image path with filename uploads/
      const imagePath = '/uploads/' + req.file.filename;
 
 
